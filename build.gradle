@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+	classpath ( 
+		[group: 'com.android.tools.build', name: 'gradle', version: "$ANDROID_GRADLE_PLUGIN_VERSION"],
+		[group: 'com.squareup.dagger', name: 'dagger-compiler', version: "$DAGGER_VERSION"] 
+ 	  ) 
+	}
+}
+
+apply plugin: 'android'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile group: 'com.squareup.dagger', name: 'dagger', version: "$DAGGER_VERSION"
+}
+
+
+android {
+    compileSdkVersion 17
+}
